@@ -1,9 +1,2 @@
-spring:
-  data:
-    mongodb:
-	  database: Bancos-DEV
-	  host: localhost
-	  port: 27017
-
 controller:
   uri: /api/v1/bancos/estado/{state}
