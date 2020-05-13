@@ -1,0 +1,23 @@
+spring:
+  data:
+    mongodb:
+      database: Bancos-DEV
+      host: localhost
+      port: 27017
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMiliseconds: 1000
+            
+controller:
+  uri: /api/v1/bancos/zipcode/{postalcode}
+ 
+messsage: Missing or invalid Parameters
+
+fallback:
+  uri: http://localhost:9090/api/v1/legacy/bancos/zipcode/
+ 
