@@ -5,5 +5,20 @@ spring:
       host: localhost
       port: 27017
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMiliseconds: 1000
+
+fallback:
+  uri: http://localhost:9090/api/v1/legacy/bancos/estado/
+
 controller:
   uri: /api/v1/bancos/estado/{state}
+  
+message:
+    badRequest: Missing or invalid Parameters
+    badChannelRequest: The request operation is not configured to access this resource
