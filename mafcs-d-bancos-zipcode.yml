@@ -16,7 +16,9 @@ hystrix:
 controller:
   uri: /api/v1/bancos/zipcode/{postalcode}
  
-messsage: Missing or invalid Parameters
+message:
+  badRequest: Missing or invalid Parameters
+  badChannelRequest: The request operation is not configured to access this resource
 
 fallback:
   uri: http://localhost:9090/api/v1/legacy/bancos/zipcode/
