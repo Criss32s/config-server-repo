@@ -1,0 +1,26 @@
+spring:
+  data:
+    mongodb:
+      database: Bancos-SIT
+      host: localhost
+      port: 27017
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMiliseconds: 1000
+ 
+maxDistance: 50
+
+controller:
+    uri: /api/v1/bancos/coordenadas
+
+fallback:
+    uri: http://localhost:9090/api/v1/legacy/bancos/coordinates
+
+message:
+    badRequest: Missing or invalid Parameters
+    badChannelRequest: The request operation is not configured to access this resource
