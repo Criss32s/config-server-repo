@@ -9,10 +9,6 @@ hystrix:
         isolation:
           thread:
             timeoutInMiliseconds: 1000
-
-feign:
-  hystrix:
-    enabled: true
     
 client:
   uri:
