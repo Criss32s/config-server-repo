@@ -14,7 +14,7 @@ client:
   uri:
     coordenadas: /api/v1/bancos/estado/{state}
     estado: /api/v1/bancos/estado/{state}
-    zipcode: /api/v1/bancos/estado/{zipcode}
+    zipcode: /api/v1/bancos/zipcode/{postalcode}
 
 controller:
   uri: /api/v1/sucursales/retrieve
