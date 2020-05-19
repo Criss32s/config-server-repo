@@ -1,0 +1,28 @@
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMiliseconds: 1000
+
+feign:
+  hystrix:
+    enabled: true
+    
+client:
+  uri:
+    coordenadas: /api/v1/bancos/estado/{state}
+    estado: /api/v1/bancos/estado/{state}
+    zipcode: /api/v1/bancos/estado/{zipcode}
+
+controller:
+  uri: /api/v1/sucursales/retrieve
+
+message:
+    badRequest: Missing or invalid Parameters
+    badChannelRequest: The request operation is not configured to access this resource
